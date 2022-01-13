@@ -34,5 +34,8 @@
         'report/report_style.xml',
 
     ],
-    "license": "Other proprietary",
+    "license": "LGPL-3",
+    "installable": True,
+    "application": False,
+    "auto_install": False,
 }

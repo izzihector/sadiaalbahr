@@ -21,5 +21,8 @@
             "/custom_background/static/src/scss/report_qweb_pdf.scss",
         ],
     },
-    "license": "Other proprietary",
+    "license": "LGPL-3",
+    "installable": True,
+    "application": False,
+    "auto_install": False,
 }
