@@ -18,7 +18,6 @@
     # for the full list
     'category': 'Uncategorized',
     'version': '15.0.0.0.8',
-
     # any module necessary for this one to work correctly
     # todo gs_partner_customuzaion
     'depends': ['base', 'account','l10n_sa_invoice'],
