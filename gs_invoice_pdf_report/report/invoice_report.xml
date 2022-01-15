@@ -111,11 +111,11 @@
 
                         <div class="row p-3" style="direction:ltr;">
                             <div class="col-auto col-2">
-                                <t t-if="doc.company_id.print_qr">
+                                <!-- <t t-if="doc.company_id.print_qr"> -->
                                 <div style="float:right;margin">
                                     <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s'%('QR', o.l10n_sa_qr_code_str, 130, 130)" class="text-right" alt="QR Code"/>
                                 </div>
-                                </t>
+                                <!-- </t> -->
                             </div>
 
                             <div class="col-5" style="font-size:14px;">
