@@ -17,7 +17,7 @@
     # Check https://github.com/odoo/odoo/blob/12.0/odoo/addons/base/data/ir_module_category_data.xml
     # for the full list
     'category': 'Uncategorized',
-    'version': '15.0.0.0.5',
+    'version': '15.0.0.0.6',
 
     # any module necessary for this one to work correctly
     # todo gs_partner_customuzaion
@@ -28,7 +28,7 @@
         'views/partner.xml',
         'views/invoice_view.xml',
         'report/sale_invoice_paper_format.xml',
-        'report/custom_header_footer.xml',
+        # 'report/custom_header_footer.xml',
         'report/invoice_report_manage.xml',
         'report/invoice_report.xml',
         'report/report_style.xml',
