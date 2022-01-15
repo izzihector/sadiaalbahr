@@ -291,7 +291,7 @@
                         <t t-set="seq" t-value="1"/>
                         <t t-set="display_discount" t-value="any([l.discount for l in o.invoice_line_ids])"/>
                         <table class="text-center gs_table mt-2" style="width:100%;border:0;direction: ltr;">
-                            <thead style="background-color:#e00814;color:#fff;padding:15px;">
+                            <thead style="background-color:#2a76a8;color:#fff;padding:15px;">
                                 <tr>
                                     <th style="width:5%; font-size:12px">
                                         <span>SN</span>
