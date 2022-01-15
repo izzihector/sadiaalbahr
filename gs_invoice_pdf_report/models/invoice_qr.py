@@ -46,7 +46,7 @@ class QRCodeAddon(models.Model):
             res = {'warning': warning}
             return res
 
-    qr_code_image = fields.Binary(string="QR Code", attachment=True)
+    qr_code_image = fields.Binary(string="QR Code:", attachment=True)
     
     # def _string_to_hex(self, value):
     #     if value:
