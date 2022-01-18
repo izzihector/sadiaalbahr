@@ -388,6 +388,15 @@
                                         <!--                                        </t>-->
 <!--                                    </tr>-->
 <!--                                </t>-->
+                                <tr style="">
+                                    <td>
+                                        <span style="color:#2a76a8;">VAT ضريبة القيمة المضافة
+                                        </span>
+                                    </td>
+                                    <td class="text-left o_price_total">
+                                        <span t-field="o.amount_tax"/>
+                                    </td>
+                                </tr>
                                 <tr class="border-black o_total">
                                     <td style="width:60%">
                                         <span style="color:#2a76a8;">Total Inc VAT الاجمالي شامل الضريبة
