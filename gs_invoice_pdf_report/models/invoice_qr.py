@@ -11,23 +11,13 @@ class QRCodeAddon(models.Model):
 
     service_date_char = fields.Char('Service Date')
 
-    def _post(self, soft=True):
-        res = super()._post(soft)
-        if self.invoice_date:
-            if self.invoice_date < fields.Date.today():
-                raise ValidationError(_("The Invoice Date Must Be Today Or After"))
-        return res
-    @api.onchange('invoice_date')
-    def _onchange_date_validation(self):
-        if self.invoice_date:
-            if self.invoice_date < fields.Date.today():
-                raise ValidationError(_("You Cannot Enter Date Before Today"))
 
-    @api.onchange('partner_id')
-    def _onchange_company_warning_vat(self):
-        if self.move_type in ('out_invoice', 'out_refund'):
-            if not self.env.company.vat:
-                raise ValidationError(_("Please Ask The Administrator To Set Tax ID To Your Company."))
+
+    # @api.onchange('partner_id')
+    # def _onchange_company_warning_vat(self):
+    #     if self.move_type in ('out_invoice', 'out_refund'):
+    #         if not self.env.company.vat:
+    #             raise ValidationError(_("Please Ask The Administrator To Set Tax ID To Your Company."))
 
     @api.onchange('partner_id')
     def _onchange_partner_warning_vat(self):
