@@ -53,7 +53,7 @@
                         gs_customer_info2{
                         border-collapse: collapse;
                         }
-                        gs_customer_info2 tr td strong{font-color:#713947;}
+                        gs_customer_info2 tr td strong{font-color:#5ba2dc;}
                     </style>
                     <div class="page font_cairo">
                         <h5 class="text-center" style="margin-bottom:30px">
@@ -85,24 +85,24 @@
                         <table class="mt-2 gs_customer_infor" style="width:100%;border:0;direction: ltr;">
                             <tr>
                                 <td>
-                                    <strong style="color:#713947;float:left">Customer</strong>
+                                    <strong style="color:#5ba2dc;float:left">Customer</strong>
                                 </td>
                                 <td class="text-center">
                                     <span t-field="doc.partner_id.name"/>
                                 </td>
                                 <td>
-                                    <strong style="color:#713947;float:right">العميل</strong>
+                                    <strong style="color:#5ba2dc;float:right">العميل</strong>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <strong style="color:#713947;float:left">Address</strong>
+                                    <strong style="color:#5ba2dc;float:left">Address</strong>
                                 </td>
                                 <td class="text-center">
                                     <span t-field="doc.partner_id.street"/>
                                 </td>
                                 <td>
-                                    <strong style="color:#713947;float:right">العنوان</strong>
+                                    <strong style="color:#5ba2dc;float:right">العنوان</strong>
                                 </td>
                             </tr>
                         </table>
@@ -124,57 +124,57 @@
 
                                     <tr t-if="doc.partner_id.phone">
                                         <td>
-                                            <strong style="color:#713947;float:left">Phone/Fax</strong>
+                                            <strong style="color:#5ba2dc;float:left">Phone/Fax</strong>
                                         </td>
                                         <td style="text-align:center">
                                             <span class="gs_customer_infor_td_vals" t-field="doc.partner_id.phone"/>
                                         </td>
                                         <td>
-                                            <strong style="color:#713947;float:right">الهاتف/الفاكس</strong>
+                                            <strong style="color:#5ba2dc;float:right">الهاتف/الفاكس</strong>
                                         </td>
                                     </tr>
                                     <tr t-if="doc.partner_id.cr_id">
                                         <td>
-                                            <strong style="color:#713947;float:left">Comm.Reg.NO</strong>
+                                            <strong style="color:#5ba2dc;float:left">Comm.Reg.NO</strong>
                                         </td>
                                         <td style="text-align:center">
                                             <span t-field="doc.partner_id.cr_id" style="display:inline-block;"/>
                                         </td>
                                         <td>
-                                            <strong style="color:#713947;float:right">السجل التجاري</strong>
+                                            <strong style="color:#5ba2dc;float:right">السجل التجاري</strong>
                                         </td>
                                     </tr>
                                     <tr t-if="doc.partner_id.vat">
                                         <td>
-                                            <strong style="color:#713947;float:left">VAT.Reg.NO</strong>
+                                            <strong style="color:#5ba2dc;float:left">VAT.Reg.NO</strong>
                                         </td>
                                         <td style="text-align:center">
                                             <span class="gs_customer_infor_td_vals" t-field="doc.partner_id.vat"/>
                                         </td>
                                         <td>
-                                            <strong style="color:#713947;float:right">الرقم الضريبي</strong>
+                                            <strong style="color:#5ba2dc;float:right">الرقم الضريبي</strong>
                                         </td>
                                     </tr>
                                     <tr t-if="doc.ref">
                                         <td>
-                                            <strong style="color:#713947;float:left">Customer Ref</strong>
+                                            <strong style="color:#5ba2dc;float:left">Customer Ref</strong>
                                         </td>
                                         <td style="text-align:center">
                                             <span class="gs_customer_infor_td_vals" t-field="doc.ref"/>
                                         </td>
                                         <td>
-                                            <strong style="color:#713947;float:right">مرجع العميل</strong>
+                                            <strong style="color:#5ba2dc;float:right">مرجع العميل</strong>
                                         </td>
                                     </tr>
                                     <tr t-if="doc.partner_id.id">
                                         <td>
-                                            <strong style="color:#713947;float:left">Customer ID</strong>
+                                            <strong style="color:#5ba2dc;float:left">Customer ID</strong>
                                         </td>
                                         <td style="text-align:center">
                                             <span class="gs_customer_infor_td_vals" t-field="doc.partner_id.id"/>
                                         </td>
                                         <td>
-                                            <strong style="color:#713947;float:right">مُعرف العميل</strong>
+                                            <strong style="color:#5ba2dc;float:right">مُعرف العميل</strong>
                                         </td>
                                     </tr>
 
@@ -182,105 +182,105 @@
                             </div>
                             <div class="col-5" style="font-size:14px;">
                                 <!--                                <span>-->
-                                <!--                                    <strong style="color:#713947;float:left"> Date </strong>-->
+                                <!--                                    <strong style="color:#5ba2dc;float:left"> Date </strong>-->
                                 <!--                                    <span class="gs_customer_infor_td_vals" t-field="doc.invoice_date"-->
                                 <!--                                          t-options='{"format": "dd/MM/yyyy"}'/>-->
                                 <!--                                </span>-->
-                                <!--                                <strong style="float:right;color:#713947;position:relative;left:15px;"> التاريخ-->
+                                <!--                                <strong style="float:right;color:#5ba2dc;position:relative;left:15px;"> التاريخ-->
                                 <!--                                </strong>-->
                                 <!--                                <br/>-->
-                                <!--                                <strong style="color:#713947;float:left"> Invoice </strong>-->
+                                <!--                                <strong style="color:#5ba2dc;float:left"> Invoice </strong>-->
                                 <!--                                <strong t-field="doc.name" class="gs_customer_infor_td_vals" style="font-size:13px"/>-->
-                                <!--                                <strong style="float:right;color:#713947;position:relative;left:15px;"> الفاتورة-->
+                                <!--                                <strong style="float:right;color:#5ba2dc;position:relative;left:15px;"> الفاتورة-->
                                 <!--                                </strong>-->
                                 <!--                                <br/>-->
-                                <!--                                <strong style="color:#713947;float:left"> Due Date </strong>-->
+                                <!--                                <strong style="color:#5ba2dc;float:left"> Due Date </strong>-->
                                 <!--                                <span class="gs_customer_infor_td_vals" t-field="doc.invoice_date_due"-->
                                 <!--                                      t-options='{"format": "dd/MM/yyyy"}'/>-->
-                                <!--                                <strong style="float:right;color:#713947;position:relative;left:15px"> تاريخ الاستحقاق-->
+                                <!--                                <strong style="float:right;color:#5ba2dc;position:relative;left:15px"> تاريخ الاستحقاق-->
                                 <!--                                </strong>-->
                                 <!--                                <br/>-->
-                                <!--                                <strong style="color:#713947;float:left"> Terms </strong>-->
+                                <!--                                <strong style="color:#5ba2dc;float:left"> Terms </strong>-->
                                 <!--                                <span t-field="doc.invoice_payment_term_id"-->
                                 <!--                                      style="font-size:12px;"/>-->
-                                <!--                                <strong style="float:right;color:#713947;position:relative;left:15px"> شروط الدفع-->
+                                <!--                                <strong style="float:right;color:#5ba2dc;position:relative;left:15px"> شروط الدفع-->
                                 <!--                                </strong>-->
                                 <!--                                <br/>-->
-                                <!--                                <strong style="color:#713947;float:left"> Sale Person </strong>-->
+                                <!--                                <strong style="color:#5ba2dc;float:left"> Sale Person </strong>-->
                                 <!--                                <span t-field="doc.user_id.name" class="gs_customer_infor_td_vals" style="font-size:12px;"/>-->
-                                <!--                                <strong style="float:right;color:#713947;position:relative;left:15px"> المندوب </strong>-->
+                                <!--                                <strong style="float:right;color:#5ba2dc;position:relative;left:15px"> المندوب </strong>-->
 
                                 <table calss="table gs_customer_info2" style="width:100%;border:0">
                                     <tr>
                                         <td style="text-align:left">
-                                            <strong class="dir_ltr" style="color:#713947;">Date</strong>
+                                            <strong class="dir_ltr" style="color:#5ba2dc;">Date</strong>
                                         </td>
                                         <td style="text-align:center">
                                             <span t-field="doc.invoice_date" t-options='{"format": "dd/MM/yyyy"}'/>
                                         </td>
                                         <td style="text-align:right">
-                                            <strong class="dir_rtl" style="color:#713947;">التاريخ</strong>
+                                            <strong class="dir_rtl" style="color:#5ba2dc;">التاريخ</strong>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td style="text-align:left">
-                                            <strong class="dir_ltr" style="color:#713947;">Invoice</strong>
+                                            <strong class="dir_ltr" style="color:#5ba2dc;">Invoice</strong>
                                         </td>
                                         <td style="text-align:center">
                                             <strong t-field="doc.name"/>
                                         </td>
                                         <td style="text-align:right">
-                                            <strong class="dir_rtl" style="color:#713947;">الفاتورة</strong>
+                                            <strong class="dir_rtl" style="color:#5ba2dc;">الفاتورة</strong>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td style="text-align:left">
-                                            <strong class="dir_ltr" style="color:#713947;">Vat</strong>
+                                            <strong class="dir_ltr" style="color:#5ba2dc;">Vat</strong>
                                         </td>
                                         <td style="text-align:center">
                                             <strong t-field="doc.company_id.vat"/>
                                         </td>
                                         <td style="text-align:right">
-                                            <strong class="dir_rtl" style="color:#713947;">رقم ضريبي</strong>
+                                            <strong class="dir_rtl" style="color:#5ba2dc;">رقم ضريبي</strong>
                                         </td>
                                     </tr>
                                     <tr t-if="doc.invoice_date_due">
                                         <td style="text-align:left">
-                                            <strong class="dir_ltr" style="color:#713947;">Due Date</strong>
+                                            <strong class="dir_ltr" style="color:#5ba2dc;">Due Date</strong>
                                         </td>
                                         <td style="text-align:center">
                                             <span t-field="doc.invoice_date_due" t-options='{"format": "dd/MM/yyyy"}'/>
                                         </td>
                                         <td style="text-align:right">
-                                            <strong class="dir_rtl" style="color:#713947;">تاريخ الاستحقاق</strong>
+                                            <strong class="dir_rtl" style="color:#5ba2dc;">تاريخ الاستحقاق</strong>
                                         </td>
                                     </tr>
                                     <tr t-if="doc.invoice_payment_term_id">
                                         <td style="text-align:left">
-                                            <strong style="display:inline-block;color:#713947;">Terms</strong>
+                                            <strong style="display:inline-block;color:#5ba2dc;">Terms</strong>
                                         </td>
                                         <td style="text-align:center;font-size:13px">
                                             <span t-field="doc.invoice_payment_term_id"/>
                                         </td>
                                         <td style="text-align:right">
-                                            <strong class="dir_rtl" style="color:#713947;">شروط الدفع</strong>
+                                            <strong class="dir_rtl" style="color:#5ba2dc;">شروط الدفع</strong>
                                         </td>
                                     </tr>
                                     <tr t-if="doc.user_id.name">
                                         <td style="text-align:left;width:25%">
-                                            <strong style="display:inline-block;color:#713947;" class="dir_ltr"> User
+                                            <strong style="display:inline-block;color:#5ba2dc;" class="dir_ltr"> User
                                             </strong>
                                         </td>
                                         <td style="text-align:center">
                                             <span t-field="doc.user_id.name"/>
                                         </td>
                                         <td style="text-align:right">
-                                            <strong class="dir_rtl" style="color:#713947;">اسم المستخدم</strong>
+                                            <strong class="dir_rtl" style="color:#5ba2dc;">اسم المستخدم</strong>
                                         </td>
                                     </tr>
                                     <!-- <tr>
                                         <td style="text-align:left;width:25%">
-                                            <strong style="display:inline-block;color:#713947;" class="dir_ltr">Sale
+                                            <strong style="display:inline-block;color:#5ba2dc;" class="dir_ltr">Sale
                                                 Branch
                                             </strong>
                                         </td>
@@ -288,7 +288,7 @@
                                             <span t-field="doc.branch_id"/>
                                         </td>
                                         <td style="text-align:right">
-                                            <strong class="dir_rtl" style="color:#713947;">الفرع</strong>
+                                            <strong class="dir_rtl" style="color:#5ba2dc;">الفرع</strong>
                                         </td>
                                     </tr> -->
                                 </table>
@@ -301,7 +301,7 @@
                         <t t-set="seq" t-value="1"/>
                         <t t-set="display_discount" t-value="any([l.discount for l in o.invoice_line_ids])"/>
                         <table class="text-center gs_table mt-2" style="width:100%;border:0;direction: ltr;">
-                            <thead style="background-color:#713947;color:#fff;padding:15px;">
+                            <thead style="background-color:#5ba2dc;color:#fff;padding:15px;">
                                 <tr>
                                     <th style="width:5%; font-size:12px">
                                         <span>SN</span>
@@ -432,7 +432,7 @@
                                 <t t-set="disc1" t-value="total_before_amount1-o.amount_untaxed"/>
                                 <tr t-if="display_discount" style="">
                                     <td>
-                                        <span style="color:#713947;">Total Be.Disc الاجمالي قبل الخصم
+                                        <span style="color:#5ba2dc;">Total Be.Disc الاجمالي قبل الخصم
                                         </span>
                                     </td>
                                     <td class="text-left">
@@ -444,7 +444,7 @@
                                 </tr>
                                 <tr t-if="display_discount" class="border-black o_subtotal" style="">
                                     <td style="">
-                                        <span style="color:#713947;">Disc الخصم
+                                        <span style="color:#5ba2dc;">Disc الخصم
                                         </span>
                                     </td>
                                     <td class="text-left">
@@ -456,7 +456,7 @@
                                 </tr>
                                 <tr t-if="display_discount" class="border-black o_subtotal" style="">
                                     <td>
-                                        <span style="color:#713947;">Total Af.Disc الاجمالي بعد الخصم
+                                        <span style="color:#5ba2dc;">Total Af.Disc الاجمالي بعد الخصم
                                         </span>
                                     </td>
                                     <td class="text-left">
@@ -466,7 +466,7 @@
                                 </tr>
                                 <tr t-if="not display_discount" class="border-black o_subtotal" style="">
                                     <td>
-                                        <span style="color:#713947;">Total الاجمالي 
+                                        <span style="color:#5ba2dc;">Total الاجمالي 
                                         </span>
                                     </td>
                                     <td class="text-left">
@@ -476,7 +476,7 @@
                                 </tr>
                                 <tr style="">
                                         <td>
-                                            <span style="color:#713947;">VAT ضريبة القيمة المضافة
+                                            <span style="color:#5ba2dc;">VAT ضريبة القيمة المضافة
                                             </span>
                                         </td>
                                         <td class="text-left o_price_total">
@@ -486,7 +486,7 @@
 
                                 <tr class="border-black o_total">
                                     <td style="width:60%">
-                                        <span style="color:#713947;">Total Inc VAT الاجمالي شامل الضريبة
+                                        <span style="color:#5ba2dc;">Total Inc VAT الاجمالي شامل الضريبة
                                         </span>
                                     </td>
                                     <td class="text-left">
