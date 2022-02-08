@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="report_journal_entries">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <t t-foreach="docs" t-as="o">
+                    <t t-set="o" t-value="o.with_context(lang=o.user_id.lang)"/>
+                    <t t-call="journal_entry_report.custom_journal_footer"/>
+                    <div class="page" style="font-size:15px;">
+                        <div style="direction:ltr">
+                            <!--                            t-if="o.user_id.lang !='ar_001'"-->
+                            <h1 class="text-center" style="position:relative;bottom:55px;">
+                                Journal Entry- قيد يومية
+                            </h1>
+                            <div class="row ml-1" style="position:relative;bottom:30px;">
+                                <div class="col-3">
+                                    <!--                                    style="position:relative;left:200px;"-->
+                                    <div class="font-italic text-center
+                                     pt-2 pb-1">
+                                        <h6>
+                                            JournalReference
+                                            <span class="pl-2">الرقم المرجعي للقيد</span>
+                                        </h6>
+                                    </div>
+                                </div>
+                                <div class="col-2" style="position:relative;top:10px;">
+                                    <!--                                    ;left:155px;-->
+                                    <strong style="color:#5d4037;" t-field=" o.name"/>
+                                </div>
+                                <div class="col-3">
+                                    <!--                                    style="position:relative;left:150px;"-->
+                                    <div class="font-italic text-center
+                                     pt-2 pb-1">
+                                        <h6>User
+                                            <span class="pl-2">اسم المستخدم</span>
+                                        </h6>
+                                    </div>
+                                </div>
+                                <div  t-if="o.user_id.lang !='ar_001'" class="col-3" style="position:relative;top:10px; right:3%;">
+                                    <!--                                    ;left:155px;-->
+                                    <strong style="color:#5d4037;" t-field="o.user_id.name"/>
+                                </div>
+                                <div t-if="o.user_id.lang =='ar_001'" class="col-3" style="position:relative;top:10px; right:15%;">
+                                    <strong style="color:#5d4037;" t-field="o.user_id.name"/>
+                                </div>
+                                <!--                                <div class="col-2" style="position:relative;top:10px;">-->
+                                <!--&lt;!&ndash;                                    left:105px&ndash;&gt;-->
+                                <!--                                    <strong style="color:#5d4037;" t-field="o.user_id.name"/>-->
+                                <!--                                </div>-->
+                            </div>
+                            <div class="row">
+                                <div class="col-3">
+                                    <div class="font-italic rounded  text-center text-white bg-secondary
+                                     pt-2 pb-1">
+                                        <h6>Journal
+                                            <span class="pl-2">اليومية</span>
+                                        </h6>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="font-italic rounded  text-center text-white bg-secondary
+                                     pt-2 pb-1">
+                                        <h6>Posting Date
+                                            <span class="pl-2">تاريخ الترحيل</span>
+                                        </h6>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="font-italic rounded  text-center text-white bg-secondary
+                                     pt-2 pb-1">
+                                        <h6>Entry Date
+                                            <span class="pl-2">تاريخ الأدخال</span>
+                                        </h6>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="font-italic rounded  text-center text-white bg-secondary
+                                     pt-2 pb-1">
+                                        <h6>Journal Date
+                                            <span class="pl-2">تاريخ القيد</span>
+                                        </h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-3">
+                                    <div class="text-center pt-3">
+                                        <strong class="text-center" t-field="o.journal_id.name"/>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="text-center pt-3">
+                                        <strong t-field="o.write_date"/>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="text-center pt-3">
+                                        <strong t-field="o.create_date"/>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="text-center pt-3">
+                                        <strong t-field="o.date" t-options="{'widget': 'date'}"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--                         <div class="row" style="color:white;" t-if="o.user_id.lang =='ar_001'">-->
+                        <!--                            <table width="100%" class="mt-2 table-hover table table-striped">-->
+                        <!--                                <thead style="background-color:#9e9e9e;">-->
+                        <!--                                    <tr>-->
+                        <!--                                        <th class="text-center text-capitalize" style="color:white;height:6%">-->
+                        <!--                                            Credit</th>-->
+                        <!--                                        <th class="text-center text-capitalize" style="color:white;">Debit</th>-->
+                        <!--                                        <th class="text-center text-capitalize" style="color:white;width:35%">-->
+                        <!--                                            Description</th>-->
+                        <!--                                        <th class="text-center text-capitalize" style="color:white;">Analytic-->
+                        <!--                                            Account</th>-->
+                        <!--                                        <th class="text-center text-capitalize" style="color:white;">Partner</th>-->
+                        <!--                                        <th class="text-center text-capitalize" style="color:white;">Account Name</th>-->
+                        <!--                                        <th class="text-center text-capitalize" style="color:white;">Account</th>-->
+                        <!--                                        <th class="text-center text-capitalize" style="color:white;">#</th>-->
+                        <!--                                    </tr>-->
+                        <!--                                    <tr>-->
+                        <!--                                        <th class="text-center" style="color:white;">دائن</th>-->
+                        <!--                                        <th class="text-center" style="color:white;">مدين</th>-->
+                        <!--                                        <th class="text-center" style="color:white;width:35%">البيان</th>-->
+                        <!--                                        <th class="text-center" style="color:white;">الحساب التحليلي</th>-->
+                        <!--                                        <th class="text-center" style="color:white;">اسم الحساب الفرعي</th>-->
+                        <!--                                        <th class="text-center" style="color:white;">اسم الحساب الرئيسي</th>-->
+                        <!--                                        <th class="text-center" style="color:white;">الحساب</th>-->
+                        <!--                                        <th class="text-center" style="color:white;">م</th>-->
+                        <!--                                    </tr>-->
+                        <!--                                </thead>-->
+                        <!--                                <tbody class="text-center">-->
+                        <!--                                    <t t-set="total_credit" t-value="0"/>-->
+                        <!--                                    <t t-set="total_debit" t-value="0"/>-->
+                        <!--                                    <t t-foreach="o.line_ids" t-as="line">-->
+                        <!--                                        <tr>-->
+                        <!--                                            <td>-->
+                        <!--                                                <span t-esc="'{:,.2f}'.format(line.credit)"/>-->
+                        <!--                                            </td>-->
+                        <!--                                            <td>-->
+                        <!--                                                <span t-esc="'{:,.2f}'.format(line.debit)"/>-->
+                        <!--                                            </td>-->
+                        <!--                                            <td>-->
+                        <!--                                                <span style='width:35%' t-field="line.name"/>-->
+                        <!--                                            </td>-->
+                        <!--                                            <td>-->
+                        <!--                                                <span t-field="line.analytic_account_id.display_name"/>-->
+                        <!--                                            </td>-->
+                        <!--                                            <td>-->
+                        <!--                                                <span t-field="line.partner_id.display_name"/>-->
+                        <!--                                            </td>-->
+                        <!--                                            <td>-->
+                        <!--                                                <span t-field="line.account_id.name"/>-->
+                        <!--                                            </td>-->
+                        <!--                                            <td>-->
+                        <!--                                                <span t-field="line.account_id.code"/>-->
+                        <!--                                            </td>-->
+                        <!--                                            <td>-->
+                        <!--                                                <span t-field="line.sequence_number"/>-->
+                        <!--                                            </td>-->
+                        <!--                                            <t t-set="total_credit" t-value="total_credit + line.credit"/>-->
+                        <!--                                            <t t-set="total_debit" t-value="total_debit + line.debit"/>-->
+                        <!--                                        </tr>-->
+                        <!--                                    </t>-->
+                        <!--                                </tbody>-->
+                        <!--                                <tfooter style="background-color:#9e9e9e;">-->
+                        <!--                                    <tr class="text-white text-center" style="background-color:#9e9e9e;">-->
+                        <!--                                        <td>-->
+                        <!--                                            <u><strong><span t-esc="total_credit"/></strong></u>-->
+                        <!--                                        </td>-->
+                        <!--                                        <td>-->
+                        <!--                                            <u><strong><span t-esc="total_debit"/></strong></u>-->
+                        <!--                                        </td>-->
+                        <!--                                        <td colspan="6"><u><strong>الاجمالي:<span t-esc="total_debit"></span></strong>-->
+                        <!--                                        </u>-->
+                        <!--                                        </td>-->
+                        <!--                                    </tr>-->
+                        <!--                                </tfooter>-->
+                        <!--                            </table>-->
+                        <!--                        </div>-->
+                        <!--                        if arabic language -->
+                        <div class="row" style="color:white;">
+                            <table width="100%" class="mt-2 table-hover table table-striped">
+                                <thead style="background-color:#9e9e9e;">
+                                    <tr>
+                                        <th class="text-center text-capitalize" style="color:white;">#</th>
+                                        <th class="text-center text-capitalize" style="color:white;">Account</th>
+                                        <th class="text-center text-capitalize" style="color:white;">Account Name</th>
+                                        <th class="text-center text-capitalize" style="color:white;">Partner</th>
+                                        <th class="text-center text-capitalize" style="color:white;">Analytic
+                                            Account
+                                        </th>
+                                        <th class="text-center text-capitalize" style="color:white;width:35%">
+                                            Description
+                                        </th>
+                                        <th class="text-center text-capitalize" style="color:white;">Debit</th>
+                                        <th class="text-center text-capitalize" style="color:white;height:6%">
+                                            Credit
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-center" style="color:white;">م</th>
+                                        <th class="text-center" style="color:white;">الحساب</th>
+                                        <th class="text-center" style="color:white;">اسم الحساب الرئيسي</th>
+                                        <th class="text-center" style="color:white;">اسم الحساب الفرعي</th>
+                                        <th class="text-center" style="color:white;">الحساب التحليلي</th>
+                                        <th class="text-center" style="color:white;width:35%">البيان</th>
+                                        <th class="text-center" style="color:white;">مدين</th>
+                                        <th class="text-center" style="color:white;">دائن</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-center">
+                                    <t t-set="total_credit" t-value="0"/>
+                                    <t t-set="total_debit" t-value="0"/>
+                                    <t t-set="seq" t-value="0"/>
+                                    <t t-foreach="o.line_ids" t-as="line">
+                                        <tr>
+                                            <td>
+                                                <t t-set="seq" t-value="seq+1"/>
+                                                <span t-esc="seq"/>
+                                            </td>
+                                            <td>
+                                                <span t-field="line.account_id.code"/>
+                                            </td>
+                                            <td>
+                                                <span t-field="line.account_id.name"/>
+                                            </td>
+                                            <td>
+                                                <span t-field="line.partner_id.display_name"/>
+                                            </td>
+                                            <td>
+                                                <span t-field="line.analytic_account_id.display_name"/>
+                                            </td>
+                                            <td>
+                                                <span style='width:35%' t-field="line.name"/>
+                                            </td>
+                                            <td>
+                                                <span t-esc="'{:,.2f}'.format(line.debit)"/>
+                                            </td>
+                                            <td>
+                                                <span t-esc="'{:,.2f}'.format(line.credit)"/>
+                                            </td>
+                                            <t t-set="total_credit" t-value="total_credit + line.credit"/>
+                                            <t t-set="total_debit" t-value="total_debit + line.debit"/>
+                                        </tr>
+                                    </t>
+                                </tbody>
+                                <tfooter style="background-color:#9e9e9e;">
+                                    <tr class="text-white text-center" style="background-color:#9e9e9e;">
+                                        <td colspan="6">
+                                            <u>
+                                                <strong>الاجمالي:
+                                                    <span t-esc="o.compute_amount_in_word2(o.amount_total)"></span>
+                                                </strong>
+                                            </u>
+                                        </td>
+
+                                        <td>
+                                            <u>
+                                                <strong>
+                                                    <span t-esc="total_debit"/>
+                                                </strong>
+                                            </u>
+                                        </td>
+
+                                        <td>
+                                            <u>
+                                                <strong>
+                                                    <span t-esc="total_credit"/>
+                                                </strong>
+                                            </u>
+                                        </td>
+                                    </tr>
+                                </tfooter>
+                            </table>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>
