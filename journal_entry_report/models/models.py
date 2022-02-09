@@ -1,5 +1,6 @@
 from odoo import models, fields, api
 from num2words import num2words
+from .money_to_text_ar import amount_to_text_arabic
 
 class JournalItem(models.Model):
     _inherit = 'account.move.line'
@@ -8,14 +9,14 @@ class JournalItem(models.Model):
 class JournalEntry(models.Model):
     _inherit = 'account.move'
 
-    def compute_amount_in_word2(self,amount):
-        if self.env.user.lang == 'en_US':
-            num_word = str(self.currency_id.amount_to_text(amount)) + ' only'
-            return num_word
-        elif self.env.user.lang == 'ar_001':
-            num_word = num2words(amount, to='currency', lang=self.env.user.lang)
-            num_word = str(num_word) + ' فقط'
-            return num_word
+    def compute_amount_in_word_ar(self, amount):
+        # num_word = num2words(amount, to='currency', lang='ar')
+        # num_word = str(num_word) + ' فقط'
+        # num_str = num_word.replace('trillion','تريليون').replace('billion','مليار')
+        # num_word = str(self.currency_id.with_context(lang='ar_001').amount_to_text(amount)) + ' only'
+        num_str = amount_to_text_arabic(amount, self.company_id.currency_id.name)
+        return num_str
 
-    # def amount_text_arabic(self,amount):
-    #     return amount_to_text_arabic(amount, self.company_id.currency_id.name)
+    def compute_amount_in_word_en(self, amount):
+        num_word = str(self.currency_id.amount_to_text(amount)) + ' only'
+        return num_word

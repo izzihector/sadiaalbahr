@@ -17,7 +17,7 @@
     # Check https://github.com/odoo/odoo/blob/14.0/odoo/addons/base/data/ir_module_category_data.xml
     # for the full list
     'category': 'Uncategorized',
-    'version': '0.1',
+    'version': '1.0',
 
     # any module necessary for this one to work correctly
     'depends': ['base','account','web'],
@@ -25,8 +25,9 @@
     # always loaded
     'data': [
         'views/views.xml',
+        'views/template.xml',
         'reports/paper_format_journal_entry.xml',
-        'reports/custom_footer.xml',
+        'reports/custom_header_footer.xml',
         'reports/journal_entry_report.xml'
     ],
 }
