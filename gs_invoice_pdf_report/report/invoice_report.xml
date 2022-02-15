@@ -55,7 +55,20 @@
                         }
                         gs_customer_info2 tr td strong{font-color:#5ba2dc;}
                     </style>
+                    <div style="position:relative">
+                        <div style="position:absolute;top:0" t-if="report_type == 'pdf'" class="text-muted">
+                            Page:
+                            <li class="list-inline-item">
+                                <strong>
+                                    <span class="page"/>
+                                    /
+                                    <span class="topage"/>
+                                </strong>
+                            </li>
+                        </div>
+                    </div>
                     <div class="page font_cairo">
+
                         <h5 class="text-center" style="margin-bottom:30px">
                             <div class="o_force_ltr" style="border-radius: 25px;background: #eef2f3; padding: 3px 0 3px 0;
                                         width:45%;border:3px solid;display:inline-block;">
