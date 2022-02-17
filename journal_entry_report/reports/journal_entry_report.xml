@@ -172,7 +172,7 @@
                                 <tfooter style="background-color:#DDD;">
 
                                     <tr class="text-center" style="background-color:#DDD;">
-                                        <td colspan="4" style="font-size: 15px">
+                                        <td colspan="5" style="font-size: 15px">
                                             <strong t-if="user.lang == 'ar_001'">
                                                 الاجمالي:<u><span t-esc="'{:,.2f}'.format(total_debit)"></span></u>
                                                 &#160;(&#160;<span t-esc="o.compute_amount_in_word_ar(total_debit)"/>&#160;)&#160;
