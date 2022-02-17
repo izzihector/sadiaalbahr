@@ -73,12 +73,12 @@
 <!--                            </div>-->
                             <table class="table table-borderless" style="font-size:15px;width:100%">
                                 <tr >
-                                    <td t-if="user.lang == 'en_US' and user.name" class="text-left"><strong>UserName:</strong></td>
-                                    <td width="25%"><strong t-if="user.name" t-field="user.name"/></td>
-                                    <td t-if="user.lang == 'ar_001' and user.name" class="text-right"><strong>اسم المستخدم:</strong></td>
-                                    <td width="1%"><strong>|</strong></td>
+<!--                                    <td t-if="user.lang == 'en_US' and user.name" class="text-left"><strong>UserName:</strong></td>-->
+<!--                                    <td width="25%"><strong t-if="user.name" t-field="user.name"/></td>-->
+<!--                                    <td t-if="user.lang == 'ar_001' and user.name" class="text-right"><strong>اسم المستخدم:</strong></td>-->
+<!--                                    <td width="1%"><strong>|</strong></td>-->
                                     <td t-if="user.lang == 'en_US' and o.name" class="text-left"><strong>JournalReference:</strong></td>
-                                    <td width="25%"><strong t-if="o.name" t-field="o.name"/></td>
+                                    <td width="50%"><strong t-if="o.name" t-field="o.name"/></td>
                                     <td t-if="user.lang == 'ar_001' and o.name" class="text-right"><strong>الرقم المرجعي للقيد:</strong></td>
 <!--                                    <td width="40%"><strong>User Name</strong>&#160; <strong t-if="o.user_id.name" t-field="o.user_id.name"/><strong t-else="">&#160; &#160; &#160; ... &#160; &#160; &#160; </strong>&#160;<span>اسم المستخدم</span>&#160; </td>-->
 <!--                                    <td width="60%"><strong>JournalReference</strong>&#160; <strong t-if="o.name" t-field="o.name"/><strong t-else="">&#160; &#160; &#160; ... &#160; &#160; &#160; </strong>الرقم المرجعي للقيد&#160; </td>-->
