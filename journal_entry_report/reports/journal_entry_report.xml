@@ -27,7 +27,7 @@
                     <div class="font_cairo">
                     <div class="page" style="font-size:15px;">
                         <div style="direction:ltr" class="font_cairo">
-                            <!--                            t-if="o.user_id.lang !='ar_001'"-->
+<!--                            t-if="o.user_id.lang !='ar_001'"-->
 <!--                            <h1 class="text-center" style="position:relative;bottom:55px;">-->
 <!--                                -->
 <!--                            </h1>                    -->
@@ -113,20 +113,18 @@
                                 <thead>
                                     <tr class="thead-light" t-if="user.lang == 'en_US'">
                                         <th class="text-center" width="3%">#</th>
-                                        <th class="text-center" width="15%">Account</th>
-                                        <th class="text-center" width="20%">Account Name</th>
-<!--                                        <th class="text-center" width="10%">Partner</th>-->
-<!--                                        <th class="text-center" width="10%">Analytic Account</th>-->
+                                        <th class="text-center" width="15%">Account Name</th>
+                                        <th class="text-center" width="10%">Partner</th>
+                                        <th class="text-center" width="10%">Analytic Account</th>
                                         <th class="text-center" width="52%">Description</th>
                                         <th class="text-center" width="5%">Debit</th>
                                         <th class="text-center" width="5%">Credit</th>
                                     </tr>
                                     <tr class="thead-light" t-if="user.lang == 'ar_001'">
                                         <th class="text-center" width="3%">م</th>
-                                        <th class="text-center" width="15%">الحساب</th>
-                                        <th class="text-center" width="20%">اسم الحساب الرئيسي</th>
-<!--                                        <th class="text-center" width="10%">اسم الحساب الفرعي</th>-->
-<!--                                        <th class="text-center" width="10%">الحساب التحليلي</th>-->
+                                        <th class="text-center" width="15%">اسم الحساب الرئيسي</th>
+                                        <th class="text-center" width="10%">اسم الحساب الفرعي</th>
+                                        <th class="text-center" width="10%">الحساب التحليلي</th>
                                         <th class="text-center" width="52%">البيان</th>
                                         <th class="text-center" width="5%">مدين</th>
                                         <th class="text-center" width="5%">دائن</th>
@@ -142,20 +140,21 @@
                                                 <span t-esc="sequence"/>
                                                 <span t-set="sequence" t-value="sequence+1"/>
                                             </td>
-                                            <td>
-                                                <span t-field="line.account_id.code"/>
-                                            </td>
+<!--                                            <td>-->
+<!--                                                <span t-field="line.account_id.code"/>-->
+<!--                                            </td>-->
                                             <td>
 <!--                                                <span t-field="line.account_id.name"/>-->
+                                                <span t-field="line.account_id.code"/> -
                                                 <span t-if="user.lang == 'en_US'" t-field="line.with_context(lang='en_US').account_id.name"/>
                                                 <span t-if="user.lang == 'ar_001'" t-field="line.with_context(lang='ar_001').account_id.name"/>
                                             </td>
-<!--                                            <td>-->
-<!--                                                <span t-field="line.partner_id.display_name"/>-->
-<!--                                            </td>-->
-<!--                                            <td>-->
-<!--                                                <span t-field="line.analytic_account_id.display_name"/>-->
-<!--                                            </td>-->
+                                            <td>
+                                                <span t-field="line.partner_id.display_name"/>
+                                            </td>
+                                            <td>
+                                                <span t-field="line.analytic_account_id.display_name"/>
+                                            </td>
                                             <td>
                                                 <span style='width:35%' t-field="line.name"/>
                                             </td>

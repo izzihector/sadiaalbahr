@@ -44,8 +44,14 @@
 <!--                </div>-->
 
                 <div class="row" style="position:relative;">
-                    <strong style="position:absolute;top:20px;left:30px" t-if="user.lang == 'en_US'" class="text-left">ACCOUNTANT MANAGER</strong>
-                    <strong style="position:absolute;top:20px;right:50px" t-if="user.lang == 'ar_001'">مسؤول الحسابات</strong>
+
+                    <strong style="position:absolute;top:20px;left:30px" t-if="user.lang == 'en_US'" class="text-left">Created By: <span t-field="o.create_uid.name"/></strong>
+                    <strong style="position:absolute;top:20px;right:50px" t-if="user.lang == 'ar_001'">أنشئ بواسطة: <span t-field="o.create_uid.name"/></strong>
+                    <strong style="position:absolute;top:20px;left:30px" t-if="user.lang == 'en_US'" class="text-left">Posted By: <span t-field="o.posted_user.name"/></strong>
+                    <strong style="position:absolute;top:20px;right:50px" t-if="user.lang == 'ar_001'">أُكد بواسطة: <span t-field="o.posted_user.name"/></strong>
+
+                    <strong style="position:absolute;top:50px;left:30px" t-if="user.lang == 'en_US'" class="text-left">ACCOUNTANT MANAGER</strong>
+                    <strong style="position:absolute;top:50px;right:50px" t-if="user.lang == 'ar_001'">مسؤول الحسابات</strong>
 
                     <div t-if="report_type == 'pdf'" class="col-2 text-left" style="position:absolute;top:90px;left:3px">
                         <strong t-if="user.lang == 'en_US'">Page:</strong>

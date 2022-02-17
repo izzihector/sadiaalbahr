@@ -93,34 +93,34 @@
                                 </t>
                             </div>
                         </h5>
-                        <div class="row">
-                        <div class="col-12">
-                        <table class="mt-2 gs_customer_infor" style="width:100%;border:0;direction: ltr;">
-                            <tr>
-                                <td>
-                                    <strong style="color:#5ba2dc;float:left">Customer</strong>
-                                </td>
-                                <td class="text-center">
-                                    <span t-field="doc.partner_id.name"/>
-                                </td>
-                                <td>
-                                    <strong style="color:#5ba2dc;float:right">العميل</strong>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong style="color:#5ba2dc;float:left">Address</strong>
-                                </td>
-                                <td class="text-center">
-                                    <span t-field="doc.partner_id.street"/>
-                                </td>
-                                <td>
-                                    <strong style="color:#5ba2dc;float:right">العنوان</strong>
-                                </td>
-                            </tr>
-                        </table>
-                        </div>
-                    </div>
+<!--                        <div class="row">-->
+<!--                        <div class="col-12">-->
+<!--                        <table class="mt-2 gs_customer_infor" style="width:100%;border:0;direction: ltr;">-->
+<!--                            <tr>-->
+<!--                                <td>-->
+<!--                                    <strong style="color:#5ba2dc;float:left">Customer</strong>-->
+<!--                                </td>-->
+<!--                                <td class="text-center">-->
+<!--                                    <span t-field="doc.partner_id.name"/>-->
+<!--                                </td>-->
+<!--                                <td>-->
+<!--                                    <strong style="color:#5ba2dc;float:right">العميل</strong>-->
+<!--                                </td>-->
+<!--                            </tr>-->
+<!--                            <tr>-->
+<!--                                <td>-->
+<!--                                    <strong style="color:#5ba2dc;float:left">Address</strong>-->
+<!--                                </td>-->
+<!--                                <td class="text-center">-->
+<!--                                    <span t-field="doc.partner_id.street"/>-->
+<!--                                </td>-->
+<!--                                <td>-->
+<!--                                    <strong style="color:#5ba2dc;float:right">العنوان</strong>-->
+<!--                                </td>-->
+<!--                            </tr>-->
+<!--                        </table>-->
+<!--                        </div>-->
+<!--                        </div>-->
 
                         <div class="row p-3" style="direction:ltr;">
                             <div class="col-auto col-2">
@@ -134,7 +134,28 @@
                             <div class="col-5" style="font-size:14px;">
 
                                 <table class="mt-2 gs_customer_infor" style="width:100%;border:0;direction: ltr;">
-
+                                    <tr>
+                                        <td>
+                                            <strong style="color:#5ba2dc;float:left">Customer</strong>
+                                        </td>
+                                        <td class="text-center">
+                                            <span t-field="doc.partner_id.name"/>
+                                        </td>
+                                        <td>
+                                            <strong style="color:#5ba2dc;float:right">العميل</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <strong style="color:#5ba2dc;float:left">Address</strong>
+                                        </td>
+                                        <td class="text-center">
+                                            <span t-field="doc.partner_id.street"/>
+                                        </td>
+                                        <td>
+                                            <strong style="color:#5ba2dc;float:right">العنوان</strong>
+                                        </td>
+                                    </tr>
                                     <tr t-if="doc.partner_id.phone">
                                         <td>
                                             <strong style="color:#5ba2dc;float:left">Phone/Fax</strong>
