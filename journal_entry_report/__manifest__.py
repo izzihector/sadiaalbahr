@@ -20,7 +20,7 @@
     'version': '1.0',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','account','web'],
+    'depends': ['base', 'account', 'web'],
 
     # always loaded
     'data': [
@@ -28,6 +28,12 @@
         'views/template.xml',
         'reports/paper_format_journal_entry.xml',
         'reports/custom_header_footer.xml',
-        'reports/journal_entry_report.xml'
+        'reports/journal_entry_report.xml',
+
+        'reports/payment_paper_format.xml',
+        'reports/custom_header_footer_payment.xml',
+        'reports/payment_recitpe_inherit.xml',
+        'reports/account_payment.xml',
+        'reports/report_style.xml',
     ],
 }
