@@ -7,7 +7,8 @@
                 <script type="text/javascript" src="/wk_accounts_reports/static/src/js/report.js"></script>
             </xpath>
         </template>-->
-        <record id="account_reports_backend_inherit" model="ir.asset">
+
+        <record id="wk_accounts_reports.account_reports_backend_inherit" model="ir.asset">
             <field name="name">account_reports_backend_inherit</field>
             <field name="bundle">web.assets_backend</field>
             <field name="path">/wk_accounts_reports/static/src/js/report.js</field>

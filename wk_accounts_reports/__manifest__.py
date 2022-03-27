@@ -14,7 +14,7 @@
 # If not, see <https://store.webkul.com/license.html/>
 #################################################################################
 {
-    "name": "Trial Balance Customization",
+    "name": "Gs Trial Balance Customization",
     "summary": """Trial Balance Customization""",
     "category": "Accounting",
     "version": "1.0.0",
@@ -25,7 +25,7 @@
     "description": """Account Report Trial Balance Customization""",
     "live_test_url": "",
     "depends": [
-        'account_reports', 'account_accountant',
+        'account_reports',
     ],
     "data": [
         'views/assets.xml',
@@ -38,8 +38,8 @@
     "currency": "USD",
     "pre_init_hook": "pre_init_check",
     'assets': {
-        'web.assets_backend': [
-            'wk_accounts_reports/static/src/**/*',
-        ],
+      'web.assets_backend': [
+        'wk_accounts_reports/static/src/js/report.js',
+      ],
     },
 }

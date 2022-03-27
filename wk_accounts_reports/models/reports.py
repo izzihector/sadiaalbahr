@@ -9,7 +9,6 @@ from odoo import models, api, _
 import logging
 _logger = logging.getLogger(__name__)
 
-
 class AccountChartOfAccountReport(models.AbstractModel):
     _inherit = "account.coa.report"
 
@@ -18,39 +17,10 @@ class AccountChartOfAccountReport(models.AbstractModel):
 
     @api.model
     def _get_columns(self, options):
-        _logger.info('======%r=====%r',self.env.context.get('print_mode', False),options)
         headers = super()._get_columns(options)
-        _logger.info("====%r=====%r",headers[0],headers[1])
         if self.env.context and  self.env.context.get('print_mode'):
             headers[0].insert(1,{'name': '', 'style': 'width:20%'},)
             headers[1].insert(1,{'name': '', 'style': 'width:20%'},)
-        # header1 = [
-        #     {'name': '', 'style': 'width:20%'},
-        #     {'name': _('Initial Balance'), 'class': 'number', 'colspan': 2},
-        # ] + [
-        #     {'name': period['string'], 'class': 'number', 'colspan': 2}
-        #     for period in reversed(options['comparison'].get('periods', []))
-        # ] + [
-        #     {'name': options['date']['string'], 'class': 'number', 'colspan': 2},
-        #     {'name': _('Total'), 'class': 'number', 'colspan': 2},
-        # ]
-        # header2 = [
-        #     {'name': '', 'style': 'width:20%'},
-        #     {'name': _('Debit'), 'class': 'number o_account_coa_column_contrast'},
-        #     {'name': _('Credit'), 'class': 'number o_account_coa_column_contrast'},
-        # ]
-        # if options.get('comparison') and options['comparison'].get('periods'):
-        #     header2 += [
-        #         {'name': _('Debit'), 'class': 'number o_account_coa_column_contrast'},
-        #         {'name': _('Credit'), 'class': 'number o_account_coa_column_contrast'},
-        #     ] * len(options['comparison']['periods'])
-        # header2 += [
-        #     {'name': _('Debit'), 'class': 'number o_account_coa_column_contrast'},
-        #     {'name': _('Credit'), 'class': 'number o_account_coa_column_contrast'},
-        #     {'name': _('Debit'), 'class': 'number o_account_coa_column_contrast'},
-        #     {'name': _('Credit'), 'class': 'number o_account_coa_column_contrast'},
-        # ]
-        _logger.info("----%r",headers)
         return headers
 
     @api.model
@@ -274,3 +244,8 @@ class AccountChartOfAccountReport(models.AbstractModel):
         if options.get('movements'):
             return ['|',('credit', '<>', 0),('debit','<>',0)]
         return [('credit', '=', 0),('debit','=',0)]
+
+class AccountGeneralLedgerReport(models.AbstractModel):
+    _inherit = "account.general.ledger"
+
+    filter_partner = True
